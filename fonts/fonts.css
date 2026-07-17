@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Ysabeau SC';
+    src: url('YsabeauSC-Bold.woff2') format('woff2'),
+        url('YsabeauSC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('Unbounded-ExtraBold.woff2') format('woff2'),
+        url('Unbounded-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url('Unbounded-Black.woff2') format('woff2'),
+        url('Unbounded-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
