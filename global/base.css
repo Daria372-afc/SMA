@@ -1,0 +1,100 @@
+.no-mt {
+    margin-top: 0;
+}
+
+.fb-50 {
+    flex-basis: 50%;
+}
+
+.container {
+    width: 100%;
+    padding: 0 2.5rem;
+    max-width: calc(93.75rem + (2.5rem * 2));
+    margin-inline: auto;
+}
+
+.effect {
+    position: absolute;
+    top: var(--t, auto);
+    bottom: var(--b, auto);
+    left: var(--l, auto);
+    right: var(--r, auto);
+    width: var(--w, 100%);
+    height: var(--h, 100%);
+    background-image: var(--bg, none);
+    background-position: var(--bgpos, top left);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.effect.tl { background-position: top left; }
+.effect.tr { background-position: top right; }
+.effect.bl { background-position: bottom left; }
+.effect.br { background-position: bottom right; }
+
+.block, .footer {
+    margin-top: 7.5rem;
+    position: relative;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .block, .footer {
+        margin-top: 9.183rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 3.25rem;
+        max-width: calc(93.75rem + (1.25rem * 2)); 
+    }
+
+    .block, .footer {
+        margin-top: 9.642rem;
+    }
+
+    .effect {
+        top: var(--mt, var(--t));
+        bottom: var(--mb, var(--b));
+        left: var(--ml, var(--l));
+        right: var(--mr, var(--r));
+    }
+}

@@ -1,0 +1,64 @@
+.button__effect-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.button__effect-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button__effect-slide:hover::before {
+        left: 0;
+    }
+}
+
+.image-overlay,
+.image-overlay img {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-drag: none;
+    user-drag: none;
+    outline: none;
+}
+
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: zoom-out;
+    padding: 10px;
+}
+
+.image-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.image-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}

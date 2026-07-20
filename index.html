@@ -5,16 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMA</title>
+    <link rel="stylesheet" href="./components/checkbox.css">
+    <link rel="stylesheet" href="./global/template_styles.css">
+    <link rel="stylesheet" href="./global/components.css">
+    <link rel="stylesheet" href="./global/base.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="styles/splide.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
+
+    <header class="header">
+        <div class="header__content container">
+            <a href="/pages/index.html" class="header__logo-link" aria-label="На главную страницу SMA">
+                <img class="header__logo" src="images/logo.png" alt="Логотип SMA">
+            </a>
+
+            <nav class="header__nav" aria-label="Основное меню">
+                <a href="/pages/about.html">О компании</a>
+                <a href="/pages/services.html">Услуги</a>
+                <a href="/pages/cases/cases.html">Кейсы</a>
+                <a href="/pages/blog/blog.html">Блог</a>
+                <a href="/pages/contacts.html">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="header__controls">
+                    <button class="header__btn-contact button__effect-slide open-popup" type="button"
+                        aria-label="Обсудить проект">
+                        <span>Обсудить проект</span>
+                        <img src="/images/contact.svg" aria-hidden="true" decoding="async" alt="" />
+                    </button>
+
+                    <button class="header__btn-bg" aria-label="Открыть меню" type="button">
+                        <svg aria-hidden="true" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="18" height="3" rx="1.5" fill="white" />
+                            <rect x="20" width="3" height="3" rx="1.5" fill="white" />
+                            <rect x="0.125" y="6.5" width="22.75" height="3.5" rx="1.75" fill="white" />
+                            <rect x="0.125" y="13.5" width="22.75" height="3.5" rx="1.75" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu">
+            <div class="burger-menu__container">
+                <nav class="burger-menu__nav">
+                    <a href="/pages/about.html" class="burger-menu__link">О компании</a>
+                    <a href="/pages/services.html" class="burger-menu__link">Услуги</a>
+                    <a href="/pages/cases/cases.html" class="burger-menu__link">Кейсы</a>
+                    <a href="/pages/blog/blog.html" class="burger-menu__link">Блог</a>
+                    <a href="/pages/contacts.html" class="burger-menu__link">Контакты</a>
+                </nav>
+
+                <button class="burger-menu__close" aria-label="Закрыть меню" type="button">
+                    <img src="/images/close.png" alt="">
+                </button>
+
+                <div class="burger-menu__socials">
+                    <a href="https://t.me/chargespb" class="burger-menu__social">
+                        <img src="/images/telegram.svg " alt="Иконка">
+                    </a>
+                    <a href="https://wa.me/79812448279?text=Привет!" class="burger-menu__social">
+                        <img src="/images/whatsapp.svg" alt="Иконка">
+                    </a>
+                </div>
+            </div>
+
+            <img src="/images/burger-menu.png" class="burger-menu__image" alt="">
+        </div>
+    </header>
+
+
     <main>
+
+
         <section class="hero">
             <div class="container">
                 <div class="hero__container">
@@ -31,7 +107,7 @@
                             которые продают b2b-продукты дороже
                         </p>
 
-                        <button class="button hero__button">
+                        <button class="button hero__button" type="button">
                             Оставить заявку
                         </button>
                     </div>
@@ -483,7 +559,7 @@
 
                     </div>
 
-                    <button class="button services__button" type="button">
+                    <button class="button button__effect-slide services__button" type="button">
 
                         Показать ещё
 
@@ -497,6 +573,12 @@
 
 
         <section class="design">
+            <picture class="design__decor">
+                <source srcset="./images/right-decor.webp" type="image/webp">
+
+                <img src="./images/right-decor.png" alt="" aria-hidden="true">
+            </picture>
+
             <div class="container">
                 <div class="design__content">
 
@@ -581,17 +663,28 @@
 
 
         <section class="advantages">
+
+            <picture class="advantages__decor">
+                <source srcset="images/right-decor-bg.webp" type="image/webp">
+
+                <img src="images/right-decor-bg.png" alt="" aria-hidden="true">
+            </picture>
+
             <div class="container">
 
                 <div class="advantages__content">
 
-                    <h2 class="advantages__title">
+                    <h2 class="advantages__title advantages__title--desktop">
                         Преимущества в цифрах и фактах
+                    </h2>
+
+                    <h2 class="advantages__title advantages__title--mobile">
+                        Преимущества
                     </h2>
 
                     <div class="advantages__cards">
 
-                        <article class="advantages-card">
+                        <div class="advantages-card">
                             <div class="advantages-card__icon">
                                 <img src="images/2-года.svg" alt="2 года">
                             </div>
@@ -599,9 +692,9 @@
                                 Выстраиваем дизайн-процессы
                                 и находим рабочую форму для задач бизнеса.
                             </p>
-                        </article>
+                        </div>
 
-                        <article class="advantages-card">
+                        <div class="advantages-card">
                             <div class="advantages-card__icon">
                                 <img src="images/200.svg" alt="Более 200">
                             </div>
@@ -610,9 +703,9 @@
                                 от презентаций и сайтов
                                 до упаковки и печати.
                             </p>
-                        </article>
+                        </div>
 
-                        <article class="advantages-card">
+                        <div class="advantages-card">
                             <div class="advantages-card__icon">
                                 <img src="images/90.svg" alt="Более 90">
                             </div>
@@ -620,27 +713,47 @@
                                 Проектов, где дизайн стал понятным
                                 и полезным инструментом коммуникации.
                             </p>
-                        </article>
+                        </div>
 
                     </div>
 
                     <div class="advantages__list">
 
                         <article class="advantages-item">
-                            <h3 class="advantages-item__title">
+
+                            <h3 class="advantages-item__title advantages-item__title--desktop">
                                 0% брака при печати
                             </h3>
 
-                            <p class="advantages-item__text">
+                            <h3 class="advantages-item__title advantages-item__title--mobile">
+                                Работаем с типографией
+                                <br />
+                                в вашем городе
+                            </h3>
+
+                            <p class="advantages-item__text advantages-item__text--desktop">
                                 Сами свяжемся с типографией в вашем городе,
                                 проверим файлы по техтребованиям
                                 и сдадим макет под ключ.
                             </p>
+
+                            <p class="advantages-item__text advantages-item__text--mobile">
+                                Самостоятельно узнаём все требования
+                                макета для печати.
+                            </p>
+
                         </article>
 
                         <article class="advantages-item">
-                            <h3 class="advantages-item__title">
+
+                            <h3 class="advantages-item__title advantages-item__title--desktop">
                                 Соблюдение дедлайнов
+                            </h3>
+
+                            <h3 class="advantages-item__title advantages-item__title--mobile">
+                                Прозрачный процесс
+                                <br />
+                                и сроки
                             </h3>
 
                             <p class="advantages-item__text">
@@ -648,6 +761,7 @@
                                 показываем промежуточные версии
                                 и всегда открыты для обратной связи.
                             </p>
+
                         </article>
 
                         <article class="advantages-item">
@@ -664,11 +778,10 @@
 
                     </div>
 
-                    <button class="button advantages__button">
+                    <button class="button button__effect-slide advantages__button" type="button">
                         Начать работу
                     </button>
 
-                    <img class="advantages__decor" src="images/advantages-decor.webp" alt="" aria-hidden="true">
 
                 </div>
 
@@ -696,68 +809,68 @@
                     <ul class="splide__list">
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/photoshop.svg" alt="Adobe Photoshop">
                                 <span class="tools__name">Photoshop</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/figma.svg" alt="Figma">
                                 <span class="tools__name">Figma</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/indesign.svg" alt="Adobe InDesign">
                                 <span class="tools__name">InDesign</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/chatgpt.svg" alt="Chat GPT Image">
                                 <span class="tools__name">Chat GPT
                                     <br />
                                     Image</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/illustrator.svg" alt="Adobe Illustrator">
                                 <span class="tools__name">Illustrator</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/claude.svg" alt="Claude">
                                 <span class="tools__name">Claude</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/midjourney.svg" alt="Midjourney">
                                 <span class="tools__name">Midjourney</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/coreldraw.svg" alt="Corel Draw">
                                 <span class="tools__name">Corel Draw</span>
-                            </article>
+                            </div>
                         </li>
 
                         <li class="splide__slide">
-                            <article class="tools__item">
+                            <div class="tools__item">
                                 <img class="tools__icon" src="images/gimp.svg" alt="Gimp">
                                 <span class="tools__name">Gimp</span>
-                            </article>
+                            </div>
                         </li>
 
                     </ul>
@@ -770,18 +883,37 @@
 
 
         <section class="stages">
+            <picture class="stages__decor">
+                <source srcset="images/left-decor.webp" type="image/webp">
 
-            <div class="container">
+                <img src="images/left-decor.png" alt="" aria-hidden="true">
+            </picture>
+
+            <div class="container stages__container">
 
                 <div class="stages__content">
 
-                    <img class="stages__decor" src="images/Снимок экрана 2026-07-03 в 18.59.15 1.svg" alt=""
-                        aria-hidden="true">
 
 
                     <h2 class="stages__title">
                         Этапы разработки
                     </h2>
+                    <!-- Линии для мобильной версии -->
+                    <img class="stages__line stages__line--mobile-1" src="images/Line-mobile-top.svg " alt=""
+                        aria-hidden="true">
+
+                    <img class="stages__line stages__line--mobile-2" src="images/Line-mobile-top.svg" alt=""
+                        aria-hidden="true">
+
+                    <img class="stages__line stages__line--mobile-3" src="images/Line-mobile-middle.svg" alt=""
+                        aria-hidden="true">
+
+                    <img class="stages__line stages__line--mobile-4" src="images/Line-mobile-bottom.svg" alt=""
+                        aria-hidden="true">
+
+                    <img class="stages__line stages__line--mobile-5" src="images/Line-mobile-middle.svg" alt=""
+                        aria-hidden="true">
+
 
                     <div class="stages__grid">
 
@@ -804,6 +936,7 @@
                         <!-- Нижняя правая линия -->
                         <img class="stages__line stages__line--bottom-right" src="images/Line-bottom-right.svg" alt=""
                             aria-hidden="true">
+
 
 
                         <article class="stage">
@@ -911,8 +1044,162 @@
         </section>
 
 
-        <section class="feedback"></section>
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__container">
+
+                    <div class="feedback__content">
+                        <h2 class="feedback__title">
+                            Нужна разработка проекта?
+                        </h2>
+
+                        <p class="feedback__description">
+                            Давайте обсудим его. Продумаем. И сделаем!
+                        </p>
+                    </div>
+
+                    <form class="feedback__form" action="#" method="post">
+
+                        <label class="feedback__field">
+                            <input class="feedback__input" type="text" name="name" placeholder="Ваше имя *" required>
+                        </label>
+
+                        <label class="feedback__field">
+                            <input class="feedback__input" type="tel" name="phone" placeholder="Ваш номер телефона *"
+                                required>
+                        </label>
+
+                        <label class="feedback__agreement">
+                            <input class="feedback__checkbox" type="checkbox" required>
+
+                            <span class="feedback__checkmark"></span>
+
+                            <span class="feedback__agreement-text">
+                                Я согласен(на) с
+                                <a href="#" class="feedback__agreement-link">
+                                    политикой конфиденциальности
+                                </a>
+                                и даю согласие на обработку персональных данных
+                            </span>
+                        </label>
+
+                        <button class="button button__effect-slide feedback__button" type="submit">
+
+                            <span class="feedback__button-text">
+                                Отправить
+                            </span>
+
+                            <span class="feedback__button-icon">
+                                <img src="images/contact.svg" alt="">
+                            </span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="related block">
+            <div class="related__inner container">
+                <h2 class="related__title">Наши кейсы</h2>
+                <div class="related__grid">
+                    <a href="https://sma-seo.ru/cases/design-katalog/instrojpol/" class="related-card">
+                        <div class="related-card__image">
+                            <img src="https://sma-seo.ru/wp-content/uploads/2026/05/prezentacziya-dlya-instrojpol.png"
+                                alt="Инстройпол" loading="lazy">
+                            <div class="related-card__overlay"></div>
+                            <span class="related-card__category">Кейс</span>
+                        </div>
+                        <div class="related-card__body">
+                            <h3 class="related-card__title">Инстройпол</h3>
+                            <p class="related-card__description">«Инстройпол» пришёл с «провальной» презентацией,
+                                которая рассказывала только о
+                                себе. Мы перепроектировали всё: начали с…</p>
+                            <span class="related-card__link">Подробнее</span>
+                        </div>
+                    </a>
+                    <a href="https://sma-seo.ru/cases/design-presentation/ekoglass/" class="related-card">
+                        <div class="related-card__image">
+                            <img src="https://sma-seo.ru/wp-content/uploads/2026/05/презентация-для-компании-экогласс-2-1024x661.png"
+                                alt="ЭкоГласс" loading="lazy">
+                            <div class="related-card__overlay"></div>
+                            <span class="related-card__category">Кейс</span>
+                        </div>
+                        <div class="related-card__body">
+                            <h3 class="related-card__title">ЭкоГласс</h3>
+                            <p class="related-card__description">Собственное производство площадью 2000 м², станки
+                                Lisec, Bavelloni, Enkong,
+                                технологии моллирования, смарт-стекла и керамической печати.…</p>
+                            <span class="related-card__link">Подробнее</span>
+                        </div>
+                    </a>
+                    <a href="https://sma-seo.ru/cases/design-presentation/ekoprodukt/" class="related-card">
+                        <div class="related-card__image">
+                            <img src="https://sma-seo.ru/wp-content/uploads/2026/05/презентация-для-проекта-экопродукты-1024x661.png"
+                                alt="ЭкоПродукт" loading="lazy">
+                            <div class="related-card__overlay"></div>
+                            <span class="related-card__category">Кейс</span>
+                        </div>
+                        <div class="related-card__body">
+                            <h3 class="related-card__title">ЭкоПродукт</h3>
+                            <p class="related-card__description">Хабаровский край — до 500 тыс. тонн рыбы, 100 тыс. тонн
+                                грибов, 70 тыс. тонн…</p>
+                            <span class="related-card__link">Подробнее</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer" style="background-image: url('images/footer.png');">
+            <div class="footer__container container">
+                <div class="footer__left">
+                    <a href="#"><img class="footer__logo" src="images/logo.png" alt="Логотип SMA" /></a>
+                    <button class="footer__subscribe" type="button">
+                        Получать рассылку об акциях
+                        <img src="images/subscribe.svg" alt="" aria-hidden="true" decoding="async">
+                    </button>
+                </div>
+                <div class="footer__actions">
+                    <div class="footer__links">
+                        <nav class="footer__nav">
+                            <a href="#">О компании</a>
+                            <a href="#">Услуги</a>
+                            <a href="#">Кейсы</a>
+                            <a href="#">Блог</a>
+                            <a href="#">Контакты</a>
+                        </nav>
+                        <a href="/policy.html" class="footer__policy">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__contacts">
+                        <p class="footer__contacts-title">Контакты</p>
+                        <div class="footer__contacts-list">
+                            <a href="tel:+79812448279"><b>Телефон:</b><br />8 (981) 244-82-79</a>
+                            <a href="mailto:Social.m.a@yandex.ru"><b>Email:</b><br />Social.m.a@yandex.ru</a>
+                        </div>
+                        <div class="footer__contacts-socials">
+                            <a href="https://t.me/chargespb"><img src="images/telegram.svg" alt="Telegram" /></a>
+                            <a
+                                href="https://wa.me/79812448279?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82"><img
+                                    src="images/whatsapp.svg" alt="WhatsApp" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <div class="container footer__legal-inner">
+                    ИП Якупов Марат Рустамович · ИНН 026910082320
+                </div>
+            </div>
+        </footer>
+
     </main>
+
+    <script src="./scripts/header.js"></script>
 
     <script src="scripts/splide.min.js"></script>
 

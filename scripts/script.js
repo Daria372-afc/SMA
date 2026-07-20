@@ -120,6 +120,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         gap: "40px",
 
+        breakpoints: {
+             1023: {
+                gap: "35px",
+            },
+
+             767: {
+                gap: "30px",
+            },
+
+            479: {
+                gap: "25px",
+            }
+        },
+
         autoWidth: true,
 
         clones: 16,
