@@ -1,13 +1,4 @@
 @font-face {
-    font-family: 'Ysabeau SC';
-    src: url('YsabeauSC-Bold.woff2') format('woff2'),
-        url('YsabeauSC-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Unbounded';
     src: url('Unbounded-ExtraBold.woff2') format('woff2'),
         url('Unbounded-ExtraBold.woff') format('woff');
@@ -20,6 +11,51 @@
     font-family: 'Unbounded';
     src: url('Unbounded-Black.woff2') format('woff2'),
         url('Unbounded-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YsabeauSC-Regular';
+    src: url('YsabeauSC-Regular.woff2') format('woff2'),
+        url('YsabeauSC-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YsabeauSC-SemiBold';
+    src: url('YsabeauSC-SemiBold.woff2') format('woff2'),
+        url('YsabeauSC-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YsabeauSC-Bold';
+    src: url('YsabeauSC-Bold.woff2') format('woff2'),
+        url('YsabeauSC-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YsabeauSC-ExtraBold';
+    src: url('YsabeauSC-ExtraBold.woff2') format('woff2'),
+        url('YsabeauSC-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YsabeauSC-Black';
+    src: url('YsabeauSC-Black.woff2') format('woff2'),
+        url('YsabeauSC-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
